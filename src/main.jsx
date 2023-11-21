@@ -11,7 +11,7 @@ function renderComponents() {
     if (validateApiKeys(apiKey, productIdentifier)) {
       const box = document.createElement('div');
       const boxElement = <BoxComponent apiKey={apiKey} productIdentifier={productIdentifier} />;
-      ReactDOM.render(boxElement, box);
+      ReactDOM.createRoot(element).render(boxElement);
       element.appendChild(box);
     }
   });
