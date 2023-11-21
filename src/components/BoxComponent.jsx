@@ -1,8 +1,8 @@
 import React from 'react'
 import './BoxComponent.css'
 
-function BoxComponent({apiKey, productIdentifier}) {
-    console.log(apiKey);
+function BoxComponent({apiKey, productIdentifier, hey=false}) {
+    console.log(apiKey,hey);
   return (
     <div className='gs__widget__wrapper'>
         <h2 className="gs__widget__heading">CARBON FOOTPRINT TRACKER</h2>

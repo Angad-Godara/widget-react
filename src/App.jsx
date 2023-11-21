@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import BoxComponent from './components/BoxComponent'
 
@@ -45,7 +43,7 @@ function App() {
       {
         showContent?.apiKey
         ?
-        <BoxComponent apiKey={showContent?.apiKey} productIdentifier={showContent?.productIdentifier}/>
+        <BoxComponent apiKey={showContent?.apiKey} productIdentifier={showContent?.productIdentifier} hey={true} />
         :
         <div data-apikey="93ce02167b8a4cd3c6189decb476b06e2cd211765ba3521e" data-productidentifier="30005211" data-cf />
       }
