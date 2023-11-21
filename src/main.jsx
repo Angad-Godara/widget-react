@@ -6,9 +6,11 @@ import BoxComponent from './components/BoxComponent';
 function renderComponents() {
   const elements = document.querySelectorAll('div[data-cf][data-productIdentifier][data-apiKey]');
   elements.forEach((element) => {
+    console.log(element);
     const productIdentifier = element.getAttribute('data-productIdentifier');
     const apiKey = element.getAttribute('data-apiKey');
     if (validateApiKeys(apiKey, productIdentifier)) {
+      element.classList.add("gs__widget__wrapper")
       const box = document.createElement('div');
       const boxElement = <BoxComponent apiKey={apiKey} productIdentifier={productIdentifier} />;
       ReactDOM.createRoot(element).render(boxElement);
