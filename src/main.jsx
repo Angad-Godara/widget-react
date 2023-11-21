@@ -10,11 +10,9 @@ function renderComponents() {
     const apiKey = element.getAttribute('data-apiKey');
     if (validateApiKeys(apiKey, productIdentifier)) {
       const box = document.createElement('div');
-      ReactDOM.createRoot(document.getElementById('root')).render(
-        <React.StrictMode>
-          <BoxComponent apiKey={apiKey} productIdentifier={productIdentifier} />
-        </React.StrictMode>,
-      )
+      const boxElement = <BoxComponent apiKey={apiKey} productIdentifier={productIdentifier} />;
+      ReactDOM.render(boxElement, box);
+      element.appendChild(box);
     }
   });
 }
