@@ -1,3 +1,21 @@
+.gs__widget__wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  width: 30.5rem;
+  padding: 1rem;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  user-select: none;
+}
+
+.gs__widget__test__img {
+  width: 20rem;
+  height: auto;
+  object-fit: contain;
+}
+
 .gs__widget__heading {
   font-size: 1.6rem;
   font-weight: 500;
@@ -16,4 +34,40 @@
   font-weight: 400;
   line-height: 1.6rem;
   color: #252525;
+}
+
+.gs__module__popup__wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d5dbb3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show__fullScreen {
+  z-index: 9999;
+}
+
+.hide__fullScreen {
+  display: none;
+  z-index: -9999;
+}
+
+.gs__module__popup {
+  background-color: #f9fafb;
+  width: 60%;
+  max-height: 90%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+/* this one is temporary */
+.gs__module__popup > p {
+  font-size: 2rem;
 }

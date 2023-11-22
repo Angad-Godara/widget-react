@@ -8,7 +8,6 @@ function renderComponents(refresh = false) {
   elements.forEach((element) => {
     const dataAdded = element.getAttribute('data-loaded');
     if (!dataAdded || refresh) {
-        element.classList.add("gs__widget__wrapper")
         element.setAttribute("data-loaded", "true");
         const productIdentifier = element.getAttribute('data-productidentifier');
         const apiKey = element.getAttribute('data-apikey');
