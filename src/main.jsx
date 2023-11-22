@@ -41,8 +41,10 @@ function renderComponents(refresh=false) {
   const observerConfig = {
     childList: true, // Watch for changes in the children of the observed node
     subtree: true,   // Watch for changes in the entire subtree
-    parent: true
   };
   
   // Start observing the target node for configured changes
   observer.observe(document.body, observerConfig);
+
+  // let's say our script loaded just after the initial load of a STATIC website
+  renderComponents();
